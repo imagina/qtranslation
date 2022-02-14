@@ -24,10 +24,8 @@ export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}
       response.data.forEach((item) => {
         //Get module name
         let moduleName = item.key.split('::')[0]
-        //Add the letter "q" at the beginning, if the moduleName has a letter "i" at the beginning it will be removed
-        moduleName = 'q' + (moduleName.charAt(0) == "i" ? moduleName.substring(1) : moduleName)
         //Replace "cms" with "layout" from string and it splits
-        let structureNames = item.key.split('::')[1].replace('cms', 'layout').split('.')
+        let structureNames = item.key.split('::')[1].split('.')
 
         //Add translations by language
         Object.keys(translations).forEach(lang => {
