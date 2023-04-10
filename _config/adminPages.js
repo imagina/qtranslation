@@ -9,7 +9,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'translation.cms.sidebar.adminTranslations',
-    icon: 'fas fa-language',
+    icon: 'fa-light fa-language',
     subHeader: {
       refresh: true,
     }
