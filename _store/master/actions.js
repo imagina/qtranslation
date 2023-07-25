@@ -4,8 +4,9 @@ import crud from "@imagina/qcrud/_services/baseService"
 import cloneDeep from 'lodash.clonedeep'
 
 //Get site settings
-export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}, payload = {}) => {
+export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}, params = {}) => {
   return new Promise((resolve, reject) => {
+    params = {refresh: true, ...params}
     //Instance response
     let translations = {en: {}, es: {}}
     rootGetters['qsiteApp/getSelectedLocalesSelect'].forEach(item => {
@@ -14,7 +15,8 @@ export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}
 
     //Request Params
     let requestParams = {
-      refresh: true,
+      refresh: params.refresh,
+      cacheKey: 'qtranslation.translations',
       params: {filter: {search: '::cms'}, take: 5}
     }
 
