@@ -1,3 +1,3 @@
-import master from '@imagina/qtranslation/_store/master'
+import master from 'modules/qtranslation/_store/master'
 
 export default {master}
