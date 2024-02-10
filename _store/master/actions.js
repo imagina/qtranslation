@@ -1,6 +1,6 @@
 //Plugins
-import config from '@imagina/qsite/_config/master/index'
-import crud from "@imagina/qcrud/_services/baseService"
+import config from 'modules/qsite/_config/master/index'
+import crud from "modules/qcrud/_services/baseService"
 import cloneDeep from 'lodash.clonedeep'
 
 //Get site settings
