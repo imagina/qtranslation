@@ -1,7 +1,11 @@
-import layout from 'modules/qtranslation/_i18n/en-us/layout'
-import sidebar from 'modules/qtranslation/_i18n/en-us/sidebar'
-
 export default {
-  layout,
-  sidebar
+  "translation": {
+    "cms": {
+      "sidebar": {
+        "adminTranslations": "Translations"
+      },
+      "newTranslation": "New Translation",
+      "updateTranslation": "Update Translation"
+    }
+  }
 }
