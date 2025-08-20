@@ -1,5 +1,5 @@
-const moduleName = 'translation';
-const moduleVersion = 'v2';
+const moduleName = 'itranslation';
+const moduleVersion = 'v1';
 const urlBase = `/${moduleName}/${moduleVersion}`
 
 
