@@ -22,7 +22,8 @@ export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}
     //Request
     crud.index('apiRoutes.qtranslation.translations', requestParams).then(async response => {
       //Map translations
-      response.data.forEach((item) => {
+      Object.keys(response.data).forEach((key) => {
+        const item = response.data[key]
         //Get module name
         let moduleName = item.key.split('::')[0]
         //Replace "cms" with "layout" from string and it splits
@@ -56,7 +57,7 @@ export const GET_TRANSLATIONS = ({commit, dispatch, state, getters, rootGetters}
             cloneDeep((item[lang] && item[lang].value) ? item[lang].value : item.value)//Value by lang or default value
           )
         })
-      });
+      });      
       resolve(translations)
     }).catch(error => {
       console.error('[store-qtranslations]Error:: Store getting site translations - ', error)
