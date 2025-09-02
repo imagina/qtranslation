@@ -6,5 +6,5 @@ const urlBase = `/${moduleName}/${moduleVersion}`
 export default {
   urlBase: urlBase,
   version: moduleVersion,
-  translations: `${urlBase}/translations`,
+  translations: `${urlBase}/all`,
 }
